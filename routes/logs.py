@@ -10,7 +10,7 @@ def get_logs():
 
     The frontend uses this endpoint to display and filter historic events.
     """
-    events = load_json("backend/data/security_events.json")
+    events = load_json("data/security_events.json")
     return (
         jsonify({
             "responseCode": "000",

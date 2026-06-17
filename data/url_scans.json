@@ -1,0 +1,58 @@
+[
+  {
+    "id": "URL001",
+    "url": "https://thingseye.io",
+    "riskScore": 0,
+    "status": "SAFE",
+    "reasons": [],
+    "scanDate": "2026-06-15 13:02:48"
+  },
+  {
+    "id": "URL002",
+    "url": "https://thingseye.io",
+    "riskScore": 0,
+    "status": "SAFE",
+    "reasons": [],
+    "scanDate": "2026-06-15 13:02:53"
+  },
+  {
+    "id": "URL003",
+    "url": "https://thingseye.io",
+    "riskScore": 0,
+    "status": "SAFE",
+    "reasons": [],
+    "scanDate": "2026-06-15 13:02:59"
+  },
+  {
+    "id": "URL004",
+    "url": "https://thingseye.io",
+    "riskScore": 0,
+    "status": "SAFE",
+    "reasons": [],
+    "scanDate": "2026-06-15 13:17:11"
+  },
+  {
+    "id": "URL005",
+    "url": "https://thingseye.io",
+    "riskScore": 0,
+    "status": "SAFE",
+    "reasons": [],
+    "scanDate": "2026-06-15 13:21:52"
+  },
+  {
+    "id": "URL006",
+    "url": "https://www.srkcycles.com",
+    "riskScore": 0,
+    "status": "SAFE",
+    "reasons": [],
+    "scanDate": "2026-06-15 16:23:48"
+  },
+  {
+    "id": "URL007",
+    "url": "https://thingseye.io",
+    "riskScore": 0,
+    "status": "SAFE",
+    "reasons": [],
+    "scanDate": "2026-06-18 00:08:27"
+  }
+]

@@ -1,1 +1,0 @@
-# CyberGuard backend package marker

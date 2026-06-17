@@ -46,5 +46,13 @@
     "status": "SAFE",
     "reasons": [],
     "scanDate": "2026-06-15 16:23:48"
+  },
+  {
+    "id": "URL007",
+    "url": "https://thingseye.io",
+    "riskScore": 0,
+    "status": "SAFE",
+    "reasons": [],
+    "scanDate": "2026-06-18 00:08:27"
   }
 ]

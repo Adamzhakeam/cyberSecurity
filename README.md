@@ -26,7 +26,7 @@ cd '/home/predator/Documents/practice/cyberSecurity project /cyberguard/backend'
 python app.py
 ```
 
-Open the UI at: `http://localhost:5000`
+Open the UI at: `http://192.168.1.6:5000`
 
 ## File storage
 

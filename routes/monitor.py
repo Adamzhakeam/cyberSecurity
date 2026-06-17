@@ -16,7 +16,7 @@ def get_processes():
     processes, alerts = collect_process_data()
 
     for alert in alerts:
-        append_json("backend/data/security_events.json", alert)
+        append_json("data/security_events.json", alert)
 
     return (
         jsonify({
@@ -35,7 +35,7 @@ def get_alerts():
     This endpoint exposes the persisted security events so the frontend
     can fetch and display alert notifications.
     """
-    events = load_json("backend/data/security_events.json")
+    events = load_json("data/security_events.json")
     return (
         jsonify({
             "responseCode": "000",

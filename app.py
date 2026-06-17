@@ -10,7 +10,8 @@ import os
 # This lets the backend be deployed separately on Render without the
 # static frontend included in the same repo.
 base_dir = os.path.dirname(os.path.abspath(__file__))
-frontend_path = os.path.abspath(os.path.join(base_dir, "..", "frontend"))
+# When running from project root the frontend folder sits next to this file.
+frontend_path = os.path.abspath(os.path.join(base_dir, "frontend"))
 if os.path.exists(frontend_path):
     app = Flask(__name__, static_folder=frontend_path, template_folder=frontend_path)
 else:

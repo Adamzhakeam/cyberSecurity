@@ -11,8 +11,8 @@ def get_dashboard_stats():
     Loads scan and event data from JSON files and returns counts
     required by the frontend dashboard.
     """
-    scans = load_json("backend/data/url_scans.json")
-    events = load_json("backend/data/security_events.json")
+    scans = load_json("data/url_scans.json")
+    events = load_json("data/security_events.json")
 
     total_scans = len(scans)
     safe = sum(1 for item in scans if item.get("status") == "SAFE")

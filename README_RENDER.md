@@ -1,7 +1,7 @@
 Render deployment notes
 ----------------------
 
-1. The backend entrypoint is `app.py` inside this folder.
+1. The backend entrypoint is `app.py` at the project root.
 2. This repo includes `Procfile` which runs:
 
    `gunicorn app:app --bind 0.0.0.0:$PORT`

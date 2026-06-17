@@ -13,8 +13,8 @@ def scan_url():
 
     Expected JSON payload: {"url": "https://example.com"}
     The function analyzes the URL, persists the scan result to
-    `backend/data/url_scans.json`, and creates an event in
-    `backend/data/security_events.json` when the URL is flagged.
+    `data/url_scans.json`, and creates an event in
+    `data/security_events.json` when the URL is flagged.
     """
     payload = request.get_json() or {}
     url = payload.get("url", "").strip()
@@ -33,7 +33,7 @@ def scan_url():
     scan_result["scanDate"] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     scan_result["id"] = scan_result.get("id")
 
-    append_json("backend/data/url_scans.json", scan_result)
+    append_json("data/url_scans.json", scan_result)
 
     if scan_result["status"] in ["SUSPICIOUS", "DANGEROUS"]:
         event_item = build_event_item(
@@ -41,7 +41,7 @@ def scan_url():
             description=f"{scan_result['status']} URL detected: {url}",
             timestamp=scan_result["scanDate"],
         )
-        append_json("backend/data/security_events.json", event_item)
+        append_json("data/security_events.json", event_item)
 
     return (
         jsonify({
