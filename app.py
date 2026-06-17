@@ -18,6 +18,22 @@ else:
     app = Flask(__name__)
 CORS(app)
 
+
+@app.after_request
+def add_cors_headers(response):
+    """Ensure CORS headers are present on all responses.
+
+    This provides a fallback in case the `flask_cors` configuration
+    isn't applied in the deployment environment. The allowed origin
+    can be overridden with the `API_CORS_ORIGIN` environment variable.
+    """
+    allowed_origin = os.environ.get("API_CORS_ORIGIN", "*")
+    response.headers["Access-Control-Allow-Origin"] = allowed_origin
+    response.headers["Access-Control-Allow-Headers"] = "Content-Type,Authorization"
+    response.headers["Access-Control-Allow-Methods"] = "GET,POST,OPTIONS,PUT,DELETE"
+    response.headers["Access-Control-Allow-Credentials"] = "true"
+    return response
+
 app.register_blueprint(dashboard_bp, url_prefix="/api")
 app.register_blueprint(phishing_bp, url_prefix="/api/phishing")
 app.register_blueprint(monitor_bp, url_prefix="/api")
