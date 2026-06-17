@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CyberGuard Security Logs</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <span class="brand-logo">CG</span>
+          <div>
+            <h1>CyberGuard</h1>
+            <p>Security Suite</p>
+          </div>
+        </div>
+        <nav class="nav-menu">
+          <a href="index.html" class="nav-link">Dashboard</a>
+          <a href="phishing.html" class="nav-link">Phishing Detector</a>
+          <a href="monitor.html" class="nav-link">Process Monitor</a>
+          <a href="logs.html" class="nav-link active">Security Logs</a>
+        </nav>
+      </aside>
+      <main class="content">
+        <header class="topbar">
+          <div>
+            <h2>Security Logs</h2>
+            <p>Review historic security events and filter by text</p>
+          </div>
+        </header>
+
+        <section class="panel-card full-width">
+          <div class="form-row">
+            <label for="search-logs">Search logs</label>
+            <input id="search-logs" type="text" placeholder="Type event type or description" />
+          </div>
+
+          <div class="table-responsive">
+            <table>
+              <thead>
+                <tr>
+                  <th>Event ID</th>
+                  <th>Event Type</th>
+                  <th>Description</th>
+                  <th>Timestamp</th>
+                </tr>
+              </thead>
+              <tbody id="logs-table-body"></tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+    <div id="toast" class="toast"></div>
+    <div id="page-loader" class="loader hidden">Loading...</div>
+    <script src="js/logs.js"></script>
+  </body>
+</html>

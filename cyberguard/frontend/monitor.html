@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CyberGuard Process Monitor</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <span class="brand-logo">CG</span>
+          <div>
+            <h1>CyberGuard</h1>
+            <p>Security Suite</p>
+          </div>
+        </div>
+        <nav class="nav-menu">
+          <a href="index.html" class="nav-link">Dashboard</a>
+          <a href="phishing.html" class="nav-link">Phishing Detector</a>
+          <a href="monitor.html" class="nav-link active">Process Monitor</a>
+          <a href="logs.html" class="nav-link">Security Logs</a>
+        </nav>
+      </aside>
+      <main class="content">
+        <header class="topbar">
+          <div>
+            <h2>Process Monitor</h2>
+            <p>Inspect running processes and highlight suspicious behavior</p>
+          </div>
+          <div class="top-actions">
+            <button class="btn-primary" id="refresh-processes">Refresh</button>
+          </div>
+        </header>
+
+        <section class="panel-card full-width">
+          <div class="table-controls">
+            <p>Process list is refreshed when you click refresh.</p>
+          </div>
+          <div class="table-responsive">
+            <table>
+              <thead>
+                <tr>
+                  <th>PID</th>
+                  <th>Name</th>
+                  <th>CPU %</th>
+                  <th>Memory %</th>
+                  <th>Path</th>
+                </tr>
+              </thead>
+              <tbody id="process-table-body"></tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+    <div id="toast" class="toast"></div>
+    <div id="page-loader" class="loader hidden">Loading...</div>
+    <script src="js/monitor.js"></script>
+  </body>
+</html>

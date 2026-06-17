@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CyberGuard Security Suite</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <span class="brand-logo">CG</span>
+          <div>
+            <h1>CyberGuard</h1>
+            <p>Security Suite</p>
+          </div>
+        </div>
+        <nav class="nav-menu">
+          <a href="index.html" class="nav-link active">Dashboard</a>
+          <a href="phishing.html" class="nav-link">Phishing Detector</a>
+          <a href="monitor.html" class="nav-link">Process Monitor</a>
+          <a href="logs.html" class="nav-link">Security Logs</a>
+        </nav>
+      </aside>
+      <main class="content">
+        <header class="topbar">
+          <div>
+            <h2>Dashboard</h2>
+            <p>Cybersecurity monitoring overview</p>
+          </div>
+          <div class="top-actions">
+            <button class="btn-primary" id="refresh-dashboard">Refresh</button>
+          </div>
+        </header>
+
+        <section class="stats-grid">
+          <article class="stat-card safe-card">
+            <div>
+              <h3>Total URLs Scanned</h3>
+              <p id="card-total-scans">0</p>
+            </div>
+          </article>
+          <article class="stat-card info-card">
+            <div>
+              <h3>Safe URLs</h3>
+              <p id="card-safe">0</p>
+            </div>
+          </article>
+          <article class="stat-card warning-card">
+            <div>
+              <h3>Suspicious URLs</h3>
+              <p id="card-suspicious">0</p>
+            </div>
+          </article>
+          <article class="stat-card danger-card">
+            <div>
+              <h3>Dangerous URLs</h3>
+              <p id="card-dangerous">0</p>
+            </div>
+          </article>
+          <article class="stat-card accent-card">
+            <div>
+              <h3>Total Security Events</h3>
+              <p id="card-events">0</p>
+            </div>
+          </article>
+        </section>
+
+        <section class="chart-panel">
+          <div class="chart-card">
+            <h3>URL Risk Distribution</h3>
+            <canvas id="riskChart"></canvas>
+          </div>
+          <div class="chart-card">
+            <h3>Security Events Trend</h3>
+            <canvas id="eventsChart"></canvas>
+          </div>
+        </section>
+      </main>
+    </div>
+    <div id="toast" class="toast"></div>
+    <div id="page-loader" class="loader hidden">Loading...</div>
+    <script src="js/dashboard.js"></script>
+  </body>
+</html>

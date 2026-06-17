@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CyberGuard Phishing Detector</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <span class="brand-logo">CG</span>
+          <div>
+            <h1>CyberGuard</h1>
+            <p>Security Suite</p>
+          </div>
+        </div>
+        <nav class="nav-menu">
+          <a href="index.html" class="nav-link">Dashboard</a>
+          <a href="phishing.html" class="nav-link active">Phishing Detector</a>
+          <a href="monitor.html" class="nav-link">Process Monitor</a>
+          <a href="logs.html" class="nav-link">Security Logs</a>
+        </nav>
+      </aside>
+      <main class="content">
+        <header class="topbar">
+          <div>
+            <h2>Phishing Detector</h2>
+            <p>Analyze suspicious URLs for risk factors</p>
+          </div>
+        </header>
+
+        <section class="panel-card">
+          <div class="form-row">
+            <label for="scan-url">Enter URL</label>
+            <input id="scan-url" type="text" placeholder="https://example.com" />
+            <button type="button" class="btn-primary" id="scan-button">Scan URL</button>
+          </div>
+
+          <div class="scan-result" id="scan-result">
+            <h3>Scan result will appear here</h3>
+          </div>
+        </section>
+      </main>
+    </div>
+    <div id="toast" class="toast"></div>
+    <div id="page-loader" class="loader hidden">Loading...</div>
+    <script src="js/phishing.js"></script>
+  </body>
+</html>
