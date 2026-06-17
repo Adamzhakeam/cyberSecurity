@@ -5,5 +5,6 @@
 // Example (production):
 // <script>window.API_BASE = "https://your-backend.onrender.com/api";</script>
 
-// Default to local backend for dev if not provided.
-window.API_BASE = window.API_BASE || "http://localhost:5000/api";
+// Default to Render backend in production if not provided.
+// Set to the provided Render app and include the API prefix.
+window.API_BASE = window.API_BASE || "https://cybersecurity-2-n5mx.onrender.com/api";
