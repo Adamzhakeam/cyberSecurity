@@ -1,6 +1,6 @@
 from flask import Blueprint, jsonify
 from utils.process_monitor import collect_process_data
-from utils.file_manager import append_json
+from utils.file_manager import append_json, load_json
 from utils.risk_calculator import build_event_item
 
 monitor_bp = Blueprint("monitor", __name__)
@@ -23,6 +23,24 @@ def get_processes():
             "responseCode": "000",
             "responseMessage": "Success",
             "responseData": processes,
+        }),
+        200,
+    )
+
+
+@monitor_bp.route("/alerts", methods=["GET"])
+def get_alerts():
+    """Return stored security events (alerts).
+
+    This endpoint exposes the persisted security events so the frontend
+    can fetch and display alert notifications.
+    """
+    events = load_json("backend/data/security_events.json")
+    return (
+        jsonify({
+            "responseCode": "000",
+            "responseMessage": "Success",
+            "responseData": events,
         }),
         200,
     )

@@ -2,7 +2,9 @@
 // static server (eg. Live Server on :5500) requests to `/api` will hit
 // the static server and return 405 for POST. Point to the Flask server
 // instead (default: http://localhost:5000).
-const apiBase = "http://localhost:5000/api";
+// Uses `window.API_BASE` when available so deployments can override the
+// backend URL (set this via an inline script or replace at build time).
+const apiBase = (window && window.API_BASE) ? window.API_BASE : "/api";
 const toastElement = document.getElementById("toast");
 const loaderElement = document.getElementById("page-loader");
 

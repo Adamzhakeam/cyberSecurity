@@ -1,5 +1,7 @@
 // Point API calls to Flask backend. Change if your backend runs elsewhere.
-const apiBase = "http://localhost:5000/api";
+// Uses `window.API_BASE` when available so deployments can override the
+// backend URL (set this via an inline script or replace at build time).
+const apiBase = (window && window.API_BASE) ? window.API_BASE : "/api";
 const toastElement = document.getElementById("toast");
 const loaderElement = document.getElementById("page-loader");
 
